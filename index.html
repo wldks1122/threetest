@@ -1,0 +1,126 @@
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="common/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="common/css/owl.carousel.min.css">
+  <meta property="og:image" content="./common/img/main_banner_img_mb.png">
+  <title>로또캠프플러스 행복나눔</title>
+
+  <link rel="stylesheet" href="common/css/style.css">
+</head>
+
+<body>
+  <div id="wrap" class="main">
+    <div class="main_banner">
+      <img loading="lazy" class="main_banner_img mb_none" src="common/img/main_banner.png">
+      <img loading="lazy" class="main_banner_img pc_none" src="common/img/main_banner_img_mb.png">
+    </div>
+    <div class="sub_banner mb_none">
+      <img loading="lazy" src="common/img/sub_banner.png">
+      <div class="sub_banner_btn_box">
+        <a href="https://vvd.im/행복지안" target="_blank">
+          <img loading="lazy" class="beat_ele" src="common/img/sub_banner_btn.png">
+        </a>
+      </div>
+    </div>
+    <a class="sub_banner_mb pc_none" href="https://vvd.im/행복지안" target="_blank">
+      <img loading="lazy" class="beat_ele" src="common/img/talk_ico.png">
+    </a>
+
+    <div class="ss_2">
+      <a href="https://vvd.im/행복지안" target="_blank"><img loading="lazy" class="ss_2_bg" src="common/img/ss_2_bg.png"><br>
+        <img loading="lazy" class="ss_2_bg" src="common/img/ss_2_1bg.png"><br>
+        <img loading="lazy" class="ss_2_bg" src="common/img/ss_2_2bg.png"></a>
+      <a href="https://vvd.im/행복지안" target="_blank" class="ref_btn">
+        <img loading="lazy" class="ss_btn shake_btn" src="common/img/ss_2_btn.png">
+      </a>
+    </div>
+    <div class="ss_4">
+      <a class="ss_4_img_box" href="https://vvd.im/행복지안" target="_blank">
+        <img loading="lazy" class="ss_4_bg" src="common/img/ss_4_bg.png">
+      </a>
+    </div>
+    <div class="ss_3">
+      <img loading="lazy" class="ss_3_bg" src="common/img/ss_3_bg.png"><br>
+      <img loading="lazy" class="ss_3_bg" src="common/img/ss_6_bg.png">
+
+    </div>
+    <div class="ss_2">
+
+      <a href="https://vvd.im/행복지안" target="_blank" class="ref_btn">
+        <img loading="lazy" class="ss_btn shake_btn animate" src="common/img/ss_2_btn.png">
+      </a>
+    </div>
+    <div class="footer">
+      <img loading="lazy" class="footer_bg mb_none" src="common/img/footer.png">
+      <img loading="lazy" class="footer_bg pc_none" src="common/img/footer_mb.png">
+    </div>
+  </div>
+
+
+  <script>
+
+</script>
+<script src="gh/alpinejs/alpine%40v2.7.3/dist/alpine.min.js" defer=""></script>
+<script src="npm/swiper%409/swiper-bundle.min.js"></script>
+<script src="ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      loop: true,
+      slideSpeed: 7000,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      paginationSpeed: 7000,
+      autoplayTimeout: 4000,
+      responsive: {
+        0: {
+          items: 2,
+          margin: 20,
+        },
+        1279: {
+          items: 4,
+          margin: 30,
+        },
+        1500: {
+          items: 4,
+          margin: 40,
+        }
+      }
+    })
+  });
+  const observer = new IntersectionObserver(intersections => {
+    intersections.forEach(({
+      target,
+      isIntersecting
+    }) => {
+      target.classList.toggle('animate', isIntersecting);
+    });
+  }, {
+    threshold: 0
+  });
+
+  document.querySelectorAll('.shake_btn').forEach(div => {
+    observer.observe(div);
+  });
+
+  window.addEventListener('load', function() {
+    $('.loading').hide();
+  })
+
+  document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+  });
+
+  $(function() {
+
+  });
+  </script>
+
+
+
+</body></html>
